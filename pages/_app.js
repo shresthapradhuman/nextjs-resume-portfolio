@@ -1,5 +1,8 @@
+import Header from "../components/header";
 import Profile from "../components/profile";
 import "../styles/global.scss";
+import "../styles/profile.scss";
+import "../styles/header.scss"
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -9,7 +12,7 @@ function MyApp({ Component, pageProps }) {
           <Profile />
         </aside>
         <main>
-          <header>Header Section</header>
+          <Header />
           <Component {...pageProps} />
           <footer>footer section</footer>
         </main>
