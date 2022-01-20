@@ -16,6 +16,7 @@ function Profile() {
             width="200"
             height="200"
             layout={`responsive`}
+            priority={true}
           />
         </figure>
         <ul>

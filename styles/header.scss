@@ -27,6 +27,7 @@ header {
   }
   .nav {
     flex: 4;
+
     &-link {
       padding: 0 15px;
       text-transform: uppercase;
@@ -90,6 +91,7 @@ header {
       box-shadow: $shadow;
       margin-top: 5px;
       padding: 5px;
+      z-index: 100;
       &-link {
         text-align: center;
         padding: 15px 5px;

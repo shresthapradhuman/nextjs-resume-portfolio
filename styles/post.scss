@@ -1,0 +1,21 @@
+@import "./variables.scss";
+.post {
+  background-color: $bgWhite;
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow: $shadow;
+  h2 {
+    margin-bottom: 5px;
+  }
+  span {
+    color: #007696;
+    font-size: 14px;
+  }
+  img {
+    margin-top: 5px !important;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: $shadow;
+    padding: 20px;
+  }
+}
