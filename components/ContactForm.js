@@ -49,6 +49,7 @@ export default function ContactForm() {
       })
       .catch((error) => alert(error));
   };
+
   return (
     <Formik
       initialValues={initialValues}
@@ -59,7 +60,6 @@ export default function ContactForm() {
         name="contact"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        data-netlify-recaptcha="true"
       >
         <div>
           <Field type="hidden" name="form-name" />
