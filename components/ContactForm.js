@@ -1,7 +1,20 @@
-import { useFormik } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 export default function ContactForm() {
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+  const initialValues = {
+    name: "",
+    email: "",
+    message: "",
+  };
   const validate = (values) => {
     const errors = {};
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
     if (!values.name) {
       errors.name = "Required";
     } else if (values.name.length > 20) {
@@ -9,70 +22,79 @@ export default function ContactForm() {
     }
     if (!values.email) {
       errors.email = "Required";
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+      errors.email = "Invalid Email";
     }
     if (!values.message) {
       errors.message = "Required";
     }
     return errors;
   };
-  const formik = useFormik({
-    initialValues: {
-      name: "",
-      email: "",
-    },
-    validate,
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
+  const onSubmit = (values, submitProps) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...values }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(response.status);
+        } else if (response.ok) {
+          alert("Message Successfully Sent.");
+          submitProps.resetForm();
+        } else {
+          alert("Oops! error has occurred");
+        }
+        return response;
+      })
+      .catch((error) => alert(error));
+  };
   return (
-    <form onSubmit={formik.handleSubmit}>
-      <div>
-        <label htmlFor="name">Name *</label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          placeholder="Name"
-          onBlur={formik.handleBlur}
-          onChange={formik.handleChange}
-          value={formik.values.name}
-        />
-        {formik.errors.name ? (
-          <div className="error">{formik.errors.name}</div>
-        ) : null}
-      </div>
-      <div>
-        <label htmlFor="email">Email *</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Email"
-          onChange={formik.handleChange}
-          value={formik.values.email}
-        />
-        {formik.errors.name ? (
-          <div className="error">{formik.errors.name}</div>
-        ) : null}
-      </div>
-      <div>
-        <label htmlFor="message">Message *</label>
-        <textarea
-          name="message"
-          id="message"
-          cols="30"
-          rows="10"
-          onChange={formik.handleChange}
-          value={formik.values.message}
-          placeholder="Enter your message"
-        ></textarea>
-        {formik.errors.name ? (
-          <div className="error">{formik.errors.name}</div>
-        ) : null}
-      </div>
+    <Formik
+      initialValues={initialValues}
+      validate={validate}
+      onSubmit={onSubmit}
+    >
+      <Form>
+        <div>
+          <input type="hidden" name="form-name" value="contact" />
+        </div>
+        <div>
+          <label htmlFor="name">Name *</label>
+          <Field type="name" id="name" name="name" placeholder="Name" />
+          <div className="error">
+            <ErrorMessage name="name" />
+          </div>
+        </div>
+        <div>
+          <label htmlFor="email">Email *</label>
+          <Field
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+          />
+          <div className="error">
+            <ErrorMessage name="email" />
+          </div>
+        </div>
+        <div>
+          <label htmlFor="message">Message *</label>
+          <Field
+            as="textarea"
+            id="message"
+            name="message"
+            placeholder="Enter your message"
+            cols="30"
+            rows="10"
+          />
+          <div className="error">
+            <ErrorMessage name="message" />
+          </div>
+        </div>
 
-      <button type="submit">Send Message</button>
-    </form>
+        <button type="submit">Send Message</button>
+      </Form>
+    </Formik>
   );
 }

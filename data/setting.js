@@ -7,14 +7,23 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 
+let age = (dob) => {
+  let db = new Date(dob);
+  let month_diff = Date.now() - db.getTime();
+  let age_dt = new Date(month_diff);
+  let year = age_dt.getUTCFullYear();
+  let age = Math.abs(year - 1970);
+  return age;
+};
+
 export const profile = {
   name: "Shrestha Pradhuman",
-  role: "Magento Developer",
-  image: "profile.jpg",
+  role: ["Magento Developer", "Full Stack Developer"],
+  image: "profile.webp",
   details: [
     {
       label: "Age",
-      value: "32",
+      value: age("04/18/1989"),
     },
     {
       label: "Residence",
@@ -140,12 +149,6 @@ export const skills = {
       },
     ],
   },
-};
-
-/** footer */
-export const footer = {
-  designer: "Shrestha Pradhuman",
-  url: "https://www.shresthapradhuman.com.np",
 };
 
 /** working */

@@ -2,13 +2,21 @@ import Image from "next/image";
 import { profile } from "../data/setting";
 import { FaDownload } from "react-icons/fa";
 import { GiSunglasses } from "react-icons/gi";
+import Typewriter from "typewriter-effect";
 import Link from "next/link";
 function Profile() {
   return (
     <>
       <section className="profile">
         <h2>{profile.name}</h2>
-        <p>{profile.role}</p>
+        <Typewriter
+          options={{
+            strings: profile.role,
+            autoStart: true,
+            loop: true,
+            delay: 100,
+          }}
+        />
         <figure>
           <Image
             src={`/images/${profile.image}`}

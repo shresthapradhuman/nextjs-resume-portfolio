@@ -16,7 +16,8 @@
     "react-icons": "^4.3.1",
     "react-markdown": "^8.0.0",
     "react-star-ratings": "^2.3.0",
-    "sass": "^1.49.0"
+    "sass": "^1.49.0",
+    "typewriter-effect": "^2.18.2"
   },
   "devDependencies": {
     "eslint": "8.7.0",
