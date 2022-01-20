@@ -216,6 +216,6 @@ export const education = [
 /** contact */
 export const contact = {
   address: "Tokyo, Japan",
-  email: "shrestha22@gmail.com",
+  email: "shresthapradhuman2018@gmail.com",
   freelance: "available",
 };
