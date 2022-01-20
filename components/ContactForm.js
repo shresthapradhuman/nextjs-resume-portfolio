@@ -55,9 +55,15 @@ export default function ContactForm() {
       validate={validate}
       onSubmit={onSubmit}
     >
-      <Form>
+      <Form
+        name="contact"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        data-netlify-recaptcha="true"
+      >
         <div>
-          <input type="hidden" name="form-name" value="contact" />
+          <Field type="hidden" name="form-name" />
+          <Field type="hidden" name="bot-field" />
         </div>
         <div>
           <label htmlFor="name">Name *</label>
