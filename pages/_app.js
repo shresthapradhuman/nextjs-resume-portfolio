@@ -5,7 +5,13 @@ import "../styles/profile.scss";
 import "../styles/header.scss";
 import "../styles/blog.scss";
 import "../styles/post.scss";
+import "../styles/about.scss";
+import "../styles/circle.scss";
+import "../styles/star.scss";
+import "../styles/resume.scss";
+import "../styles/contact.scss";
 import Head from "next/head";
+import Footer from "../components/footer";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -21,7 +27,7 @@ function MyApp({ Component, pageProps }) {
         <main>
           <Header />
           <Component {...pageProps} />
-          <footer>footer section</footer>
+          <Footer />
         </main>
       </div>
     </>

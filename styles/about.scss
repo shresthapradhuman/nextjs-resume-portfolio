@@ -1,0 +1,134 @@
+@import "./variables.scss";
+.about {
+  background: #fafafa;
+  box-shadow: $shadow;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+.me {
+  padding: 40px 20px;
+  background: $bgWhite;
+  border-radius: 5px 5px 0 0;
+  font-weight: 400;
+  line-height: 1.375;
+  h2 {
+    font-weight: 500;
+  }
+}
+
+.services {
+  padding: 40px 20px;
+  .row {
+    justify-content: space-between;
+  }
+  .card {
+    flex-basis: 48%;
+    &-box {
+      margin-top: 10px;
+      h3 {
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 0 20px 0;
+      }
+      div {
+        padding: 25px 20px 25px 0px;
+        border-top: 2px solid #eee;
+        border-right: 2px solid #eee;
+        position: relative;
+        transform: all 0.3s ease 0s;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 2px;
+          background: #eee;
+          bottom: 0;
+          right: 0;
+          transform: all 0.3s ease 0s;
+        }
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.375;
+        margin: 0;
+      }
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border: 2px solid #eee;
+        border-radius: 50%;
+        background: $bgWhite;
+        position: absolute;
+        top: -30px;
+        left: -10px;
+        svg {
+          font-size: 30px;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        div {
+          border-top-color: #feb100;
+          border-right-color: #feb100;
+          &::before {
+            width: 50%;
+            background: #feb100;
+          }
+        }
+        span {
+          border-color: #feb100;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .row {
+      flex-wrap: wrap;
+    }
+    .card {
+      flex-basis: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
+.skills {
+  padding: 40px 20px;
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+  .row {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .code,
+    .lang {
+      flex-basis: 49%;
+      box-shadow: $shadow;
+      h3 {
+        padding-left: 5px;
+        text-transform: capitalize;
+        font-weight: 500;
+        text-align: center;
+      }
+      .row {
+        .circle {
+          flex-basis: 50%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .row {
+      .lang,
+      .code {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
