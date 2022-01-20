@@ -8,7 +8,7 @@
 }
 html,
 body {
-  background: url(../public/bg.png);
+  background: url(../public/images/bg.png);
   position: relative;
   font-size: 16px;
 }
@@ -60,7 +60,7 @@ body {
 
 .notfound {
   background-color: $bgWhite;
-  background: url(../public/notfound.png);
+  background: url(../public/images/notfound.png);
   height: 68vh;
   display: flex;
   flex-direction: column;

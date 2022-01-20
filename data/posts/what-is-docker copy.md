@@ -2,12 +2,12 @@
 title: "What is Docker?"
 date: "Jan 20, 2022"
 excerpt: "Today's I will explain Docker. So, before I explain Docker let me explain why we need Docker?"
-cover_image: "/images/posts/docker.png"
+cover_image: "/images/posts/docker.jpg"
 ---
 
 ## Today's I will explain Docker. So, before I explain Docker let me explain why we need Docker?
 
-![alt docker-image](https://www.saturnme.com/wp-content/uploads/2019/10/vertical-logo-monochromatic-1.png)
+![alt docker-image](/images/posts/docker.jpg)
 
 You create an application in your development machine, and that's working fine in your machine. but in production, it doesn't work properly. Developers experience this problem a lot. That is when the Developers' famous lines are spoken, "It's working on my machine".
 

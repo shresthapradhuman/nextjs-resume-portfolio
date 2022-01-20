@@ -3,9 +3,9 @@ import Head from "next/head";
 function Work() {
   return (
     <>
-    <Head>
-      <title>Portfolio | Work</title>
-    </Head>
+      <Head>
+        <title>Portfolio | Work</title>
+      </Head>
       <h1>Work Section</h1>
     </>
   );
