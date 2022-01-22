@@ -4,7 +4,20 @@ import { FaDownload } from "react-icons/fa";
 import { GiSunglasses } from "react-icons/gi";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
+import * as gtag from "../lib/gtag";
+import { useState } from "react";
 function Profile() {
+  const [score, setScore] = useState(0);
+  const handleGA = () => {
+    setScore(score++);
+
+    gtag.event({
+      action: "csv_download",
+      category: "score",
+      label: "score",
+      value: score
+    });
+  };
   return (
     <>
       <section className="profile">
@@ -39,7 +52,7 @@ function Profile() {
         </ul>
         <span className="cv">
           <Link href={"/download/resume.pdf"}>
-            <a target={"_blank"}>
+            <a target={"_blank"} onClick={handleGA}>
               Download CV
               <span>
                 <FaDownload />
