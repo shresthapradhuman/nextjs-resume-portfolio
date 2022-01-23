@@ -10,7 +10,7 @@ import "../styles/circle.scss";
 import "../styles/star.scss";
 import "../styles/resume.scss";
 import "../styles/contact.scss";
-import "../styles/work.scss";
+import "../styles/repo.scss";
 import Head from "next/head";
 import Footer from "../components/footer";
 import { useRouter } from "next/router";

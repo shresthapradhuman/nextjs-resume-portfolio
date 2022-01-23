@@ -47,7 +47,7 @@ export const nav = [
     title: "resume",
   },
   {
-    title: "work",
+    title: "repo",
   },
   {
     title: "blog",
@@ -219,3 +219,5 @@ export const contact = {
   email: "shresthapradhuman2018@gmail.com",
   freelance: "available",
 };
+
+
