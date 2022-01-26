@@ -7,7 +7,7 @@ cover_image: "/images/posts/sqlinjection.webp"
 
 #### WHAT IS SQL INJECTION?
 
-![alt sqlinjection](/public/images/posts/sqlinjection.webp)
+![alt sqlinjection](/images/posts/sqlinjection.webp)
 
 Let's assume that you have a helper Robot that takes instruction from you and goes to the shop and does the shopping for you. 
 
