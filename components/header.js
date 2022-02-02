@@ -13,18 +13,25 @@ function Header() {
     setMobile(false);
   };
   return (
-    <header>
+    <header className="rounded-xl relative shadow shadow-slate-400 h-16 flex bg-white justify-between items-center">
       <Link href={"/"}>
-        <a className="home" onClick={handleNavClick}>
-          <FaHome />
+        <a
+          className="h-full rounded-tl-md hover:bg-yellow-500 rounded-bl-md w-16 flex items-center justify-center bg-yellow-400"
+          onClick={handleNavClick}
+        >
+          <FaHome size="30" />
         </a>
       </Link>
-      <nav className={`nav ${mobile ? "nav-mobile" : ""}`}>
+      <nav
+        className={`${
+          mobile ? "flex" : "hidden"
+        } md:flex absolute md:relative md:top-0 w-full flex-col md:flex-row top-16 mt-1 md:mt-0 md:flex-1 z-10 bg-white rounded-md shadow shadow-slate-400 p-2 md:shadow-none `}
+      >
         {nav.map((item, key) => (
           <Link key={key} href={`/${item.title}`}>
             <a
-              className={`nav-link ${
-                router.pathname == `/${item.title}` ? "nav-active" : ""
+              className={` text-center py-4 md:py-0 md:px-2 border-b-2 md:border-0 last:border-b-0 uppercase hover:text-yellow-400 ${
+                router.pathname == `/${item.title}` ? "text-yellow-400" : ""
               }`}
               onClick={handleNavClick}
             >
@@ -33,23 +40,23 @@ function Header() {
           </Link>
         ))}
       </nav>
-      <nav className="social">
+      <div className="flex flex-auto justify-end md:flex-none">
         {social.map((item, key) => (
           <Link key={key} href={item.url}>
-            <a className="social-link">{item.icon}</a>
+            <a className="px-1">{item.icon}</a>
           </Link>
         ))}
-      </nav>
+      </div>
       <Link href={"/contact"}>
-        <a className="hire">
-          Hire Me{" "}
-          <span>
+        <a className="flex items-center bg-yellow-400 py-1 px-2 mx-2 rounded-2xl hover:bg-yellow-500">
+          <span className="mr-2">
             <FaPaperPlane />
           </span>
+          Hire Me
         </a>
       </Link>
-      <span className="hamburger" onClick={handleMobileClick}>
-        {mobile ? <FaTimes /> : <FaBars />}
+      <span className="flex items-center justify-center mx-2 cursor-pointer md:hidden" onClick={handleMobileClick}>
+        {mobile ? <FaTimes size="20" /> : <FaBars size="20" />}
       </span>
     </header>
   );

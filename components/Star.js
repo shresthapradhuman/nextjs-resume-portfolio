@@ -6,8 +6,8 @@ function Star({ title, ratings }) {
     ssr: false,
   });
   return (
-    <div className="star">
-      <label htmlFor="ratings">{title}</label>
+    <div className="flex flex-col  my-3">
+      <label htmlFor="ratings" className=" mb-5 font-medium">{title}</label>
       <span>
         <StarRatings
           rating={num}

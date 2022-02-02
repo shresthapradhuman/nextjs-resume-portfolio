@@ -1,21 +1,25 @@
+import {
+  CircularProgressbar,
+  buildStyles,
+} from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 function Circle({ title, percent }) {
-  let offset = 370 - (370 * percent) / 100;
   return (
-    <div className="circle">
-      <div className="percent">
-        <svg>
-          <circle cx="50%" cy="50%" r="60"></circle>
-          <circle
-            cx="50%"
-            cy="50%"
-            r="60"
-            style={{ strokeDashoffset: offset }}
-          ></circle>
-        </svg>
-        <h3 className="number">{`${percent}%`}</h3>
+    <>
+      <div className="basis-6/12 flex flex-col items-center py-2">
+        <CircularProgressbar
+          value={percent}
+          text={`${percent}%`}
+          strokeWidth={7}
+          styles={buildStyles({
+            textColor: "#000",
+            pathColor: "#feb100",
+            trailColor: "#eee",
+          })}
+        />
+        <p className="my-2 capitalize font-medium">{title}</p>
       </div>
-      <h2>{title}</h2>
-    </div>
+    </>
   );
 }
 

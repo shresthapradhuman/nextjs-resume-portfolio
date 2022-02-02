@@ -1,16 +1,7 @@
 import Header from "../components/header";
 import Profile from "../components/profile";
 import "../styles/global.scss";
-import "../styles/profile.scss";
-import "../styles/header.scss";
-import "../styles/blog.scss";
-import "../styles/post.scss";
-import "../styles/about.scss";
-import "../styles/circle.scss";
-import "../styles/star.scss";
-import "../styles/resume.scss";
 import "../styles/contact.scss";
-import "../styles/repo.scss";
 import Head from "next/head";
 import Footer from "../components/footer";
 import { useRouter } from "next/router";
@@ -34,11 +25,11 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Resume Portofolio Bloging Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="wrapper">
-        <aside>
+      <div className="w-full xl:w-9/12 px-5 xl:mx-auto mt-5 lg:mt-14 lg:flex lg:justify-between">
+        <aside className="mb-5 lg:basis-4/12 xl:basis-3/12">
           <Profile />
         </aside>
-        <main>
+        <main className="lg:basis-8/12 lg:ml-5 xl:basis-9/12">
           <Header />
           <Component {...pageProps} />
           <Footer />

@@ -16,7 +16,7 @@ const fetcher = async () => {
   return data;
 };
 
-function Repo() {
+function Projects() {
   const { data, error } = useSWR("work", fetcher);
   if (error) return `An error has occured`;
   if (!data) return `loading..`;
@@ -25,17 +25,17 @@ function Repo() {
       <Head>
         <title>Portfolio | Work</title>
       </Head>
-      <section className="repo">
-        <h2 className="title">My Repository</h2>
-        <div className="row">
+      <section className="mt-3 shadow shadow-slate-400 rounded-2xl my-2 bg-white py-10 px-5">
+        <h2 className="title text-2xl pb-2 mb-5">My Repository</h2>
+        <div className="grid grid-cols-1 xl:grid-cols-4 gap-4 md:grid-cols-2">
           {console.log(data)}
           {data.map((item, key) => (
             <Link href={item.html_url} key={key}>
-              <a className="card">
-                <div className="card-body">
-                  <h2>{item.name.slice(0, 20)}</h2>
-                  <p>{item.description.slice(0, 200)}</p>
-                  <span>{item.language}</span>
+              <a className="shadow shadow-slate-400">
+                <div className="p-2">
+                  <h2 className="text-lg capitalize text-center py-1">{item.name.slice(0, 20)}</h2>
+                  <p className="font-light mb-2 h-32">{item.description.slice(0, 100)}</p>
+                  <span className="block text-right">{item.language}</span>
                 </div>
               </a>
             </Link>
@@ -45,4 +45,4 @@ function Repo() {
     </>
   );
 }
-export default Repo;
+export default Projects;

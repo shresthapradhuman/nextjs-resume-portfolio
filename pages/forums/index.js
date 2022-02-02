@@ -20,9 +20,9 @@ function Blog({ posts }) {
       <Head>
         <title>Portfolio | Blog</title>
       </Head>
-      <section className="blog">
-        <h1 className="title">Blog</h1>
-        <div className="row">
+      <section className="my-5 mt-3 shadow shadow-slate-400 rounded-2xl py-10 px-5 bg-white">
+        <h1 className="title pb-2 mb-5 text-2xl font-medium">Blog</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           {datas.map((post, key) => (
             <BlogCard
               key={key}

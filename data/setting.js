@@ -47,10 +47,10 @@ export const nav = [
     title: "resume",
   },
   {
-    title: "repo",
+    title: "projects",
   },
   {
-    title: "blog",
+    title: "forums",
   },
   {
     title: "contact",
