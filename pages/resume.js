@@ -20,9 +20,9 @@ export default function Resume() {
                 key={key}
                 className="border-l-2  relative before:absolute pb-5 pl-8 before:w-4 before:h-4 before:border-2 before:border-yellow-400 before:rounded-full before:bg-white last:border-0 "
               >
-                <h3 className="text-lg font-medium mb-1">{item.work}</h3>
-                <span className="text-base font-medium block mb-1">{`${item.from} ~ ${item.to}`}</span>
-                <p className="text-lg font-light">{item.description}</p>
+                <p className="text-lg font-medium mb-1">{item.work}</p>
+                <p className="font-medium block mb-1">{`${item.from} ~ ${item.to}`}</p>
+                <p className="font-light">{item.description}</p>
               </li>
             ))}
           </ul>
@@ -38,9 +38,9 @@ export default function Resume() {
                 key={key}
                 className="border-l-2 relative before:absolute pb-5 pl-8 before:w-4 before:h-4 before:border-2 before:border-yellow-400 before:rounded-full before:bg-white last:border-0 "
               >
-                <h3 className="text-lg font-medium mb-1">{item.school}</h3>
-                <span className="text-base font-medium block mb-1">{`${item.from} ~ ${item.to}`}</span>
-                <p className="text-lg font-light">{item.description}</p>
+                <p className="text-lg font-medium mb-1">{item.school}</p>
+                <p className="font-medium block mb-1">{`${item.from} ~ ${item.to}`}</p>
+                <p className="font-light">{item.description}</p>
               </li>
             ))}
           </ul>

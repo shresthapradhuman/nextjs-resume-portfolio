@@ -31,7 +31,7 @@ function Header() {
           <Link key={key} href={`/${item.title}`}>
             <a
               className={` text-center py-4 md:py-0 md:px-2 border-b-2 md:border-0 last:border-b-0 uppercase hover:text-yellow-400 ${
-                router.pathname == `/${item.title}` ? "text-yellow-400" : ""
+                router.pathname == `/${item.title}` ? "text-black" : ""
               }`}
               onClick={handleNavClick}
             >
@@ -43,7 +43,7 @@ function Header() {
       <div className="flex flex-auto justify-end md:flex-none">
         {social.map((item, key) => (
           <Link key={key} href={item.url}>
-            <a className="px-1" target="_blank" aria-label={item.label}>
+            <a className="px-1" target="_blank" rel="noreferrer" aria-label={item.label}>
               {item.icon}
             </a>
           </Link>

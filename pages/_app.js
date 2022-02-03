@@ -33,7 +33,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <meta name="description" content="Resume Portofolio Bloging Website" />
+        <meta
+          name="description"
+          content="Shrestha Pradhuman, Resume Portfolio, Blogging Website"
+        />
         <link rel="icon" href="/favicon.ico" />
         <title>{`Resume Portfolio | ${pathCapitalize.join(" | ")}`}</title>
       </Head>
