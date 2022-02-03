@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
 import { working, education } from "../data/setting";
+import { Skill } from "../section/skills";
 
 export default function Resume() {
   return (
@@ -45,6 +46,7 @@ export default function Resume() {
             ))}
           </ul>
         </div>
+        <Skill />
       </section>
     </>
   );

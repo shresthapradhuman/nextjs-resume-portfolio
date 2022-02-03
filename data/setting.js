@@ -6,6 +6,8 @@ import {
   FaMobile,
   FaYoutube,
 } from "react-icons/fa";
+import { SiMaterialdesignicons } from "react-icons/si";
+import { GrVmMaintenance } from "react-icons/gr";
 
 let age = (dob) => {
   let db = new Date(dob);
@@ -87,7 +89,7 @@ export const me = {
   title: "About Me",
   strong: "Hello! I'm Shrestha Pradhuman.",
   description:
-    "Web Developer From Tokyo, Japan. I am passionate about Web Designing. I have rich experience in Magento, also I'm good at WordPress. I love to talk with you about our unique.",
+    "Magento Web Developer From Tokyo, Japan. I am passionate about Web Designing. I have rich experience in Magento, also I'm good at WordPress. I love to talk with you about our unique.",
 };
 
 /** about services */
@@ -96,15 +98,27 @@ export const services = {
   item: [
     {
       icon: <FaHtml5 className="html" />,
-      title: "Web Application",
+      title: "Website Design",
       description:
-        "I can provide mobile responsive, cross-browser, and cross-platform web development services. Starting from basic website designs, including CMS and online store building to highly complex business website apps and design solutions. I can provide you best web solutions.",
+        "Starting from mobile responsive, cross-browser, and cross-platform basic website design to highly complex cms, and online eCommerce websites. I can provide you best web solutions for your business.",
+    },
+    {
+      icon: <SiMaterialdesignicons />,
+      title: "Website Redesign",
+      description:
+        "If You are not happy with your current website. Then, I can help you to redesign with your idealogy. I can provide the best solution to what, where and how you can achieve your goal.",
+    },
+    {
+      icon: <GrVmMaintenance />,
+      title: "Website Maintenance",
+      description:
+        "Your time is money, and money is your time. I can maintain your website and web server on your behalf of you. so that you can have more time to earn more from your business.",
     },
     {
       icon: <FaMobile className="mobile" />,
       title: "Mobile Application",
       description:
-        "In the current times, the world is controlled by fingertips. Mobile apps are the most competent tool to optimize, enhance, increase your business operations. So, I can provide cross-browser and cross-platform supported mobile applications for your business.",
+        "Mobile Applications for business are the most competent tool to optimize, enhance, increase your business operations. So, I can provide cross-browser and cross-platform supported mobile applications for your business.",
     },
   ],
 };
