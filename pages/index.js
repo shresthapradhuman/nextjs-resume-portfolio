@@ -6,9 +6,6 @@ import { Skill } from "../section/skills";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Portfolio | About</title>
-      </Head>
       <section className="about mt-3 shadow shadow-slate-400 rounded-2xl my-2">
         <Me />
         <Services />

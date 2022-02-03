@@ -14,7 +14,7 @@ function Star({ title, ratings }) {
           numberOfStars={10}
           starRatedColor="#feb100"
           name="rating"
-          starDimension="20px"
+          starDimension="18px"
           starSpacing="5px"
         />
       </span>

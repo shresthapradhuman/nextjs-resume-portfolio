@@ -5,9 +5,6 @@ import { working, education } from "../data/setting";
 export default function Resume() {
   return (
     <>
-      <Head>
-        <title>Portfolio | Resume</title>
-      </Head>
       <section className="my-5 mt-3 shadow shadow-slate-400 rounded-2xl py-10 px-5 bg-white">
         <h1 className="title pb-2 mb-5 text-2xl font-medium">My Resume</h1>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4">

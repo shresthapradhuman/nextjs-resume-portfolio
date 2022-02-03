@@ -9,6 +9,16 @@ import * as gtag from "../lib/gtag";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  let path = router.asPath;
+  let pathCapitalize = [];
+  if (path.replace("/", "") !== "") {
+    let pathArray = path.replace("/", "").split("/");
+    pathArray.map((item) => {
+      pathCapitalize.push(item[0].toUpperCase() + item.slice(1));
+    });
+  } else {
+    pathCapitalize.push("About Me");
+  }
   useEffect(() => {
     const handleRouteChange = (url) => {
       gtag.pageview(url);
@@ -23,6 +33,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta name="description" content="Resume Portofolio Bloging Website" />
         <link rel="icon" href="/favicon.ico" />
+        <title>{`Resume Portfolio | ${pathCapitalize.join(" | ")}`}</title>
       </Head>
       <div className="w-full xl:w-9/12 px-5 xl:mx-auto mt-5 lg:mt-14 lg:flex lg:justify-between">
         <aside className="mb-5 lg:basis-4/12 xl:basis-3/12">
