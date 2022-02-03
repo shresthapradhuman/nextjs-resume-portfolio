@@ -3,9 +3,8 @@ title: "What is SQL INJECTION "
 date: "26 Jan, 2022"
 excerpt: " SQL INJECTION is the web hacking technique by putting the malicious code in SQL statement via webpage input."
 cover_image: "/images/posts/sqlinjection.webp"
+category: ["SQL", "Security"]
 ---
-
-#### WHAT IS SQL INJECTION?
 
 ![alt sqlinjection](/images/posts/sqlinjection.webp)
 
@@ -33,7 +32,7 @@ here [ -- ] comments the whole query and [1=1] which is always true.
 
 This will let hackers get access to your website using SQL INJECTION. After a successful SQL INJECTION exploit, one can read, update, delete, and create data in your database.
 
-### So, What are the preventions for this?
+So, What are the preventions for this?
 
 1. Input Validation
 1. Parameterized the query
@@ -42,6 +41,4 @@ This will let hackers get access to your website using SQL INJECTION. After a su
 1. Avoiding Administrative Privileges
 1. Web Application Firewall
 
-I hope this content helps you to understand the basics of SQL INJECTION.&nbsp;
-
-
+I hope this content helps you to understand the basics of SQL INJECTION.

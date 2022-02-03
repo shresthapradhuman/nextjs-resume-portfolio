@@ -3,11 +3,25 @@ import path from "path";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
-function Post({ frontmatter: { title, date, cover_image }, slug, content }) {
+function Post({
+  frontmatter: { title, date, cover_image, category },
+  slug,
+  content,
+}) {
   return (
-    <section className="post">
-      <h2>{title}</h2>
-      <span>{date}</span>
+    <section className="forum my-5 mt-3 shadow shadow-slate-400 rounded-2xl py-10 px-5 bg-white">
+      <h2 className="text-xl font-medium mb-2">{title}</h2>
+      <div className="mb-2">
+        {category.map((item, key) => (
+          <span
+            key={key}
+            className="px-1 py-1 bg-orange-400 mr-1 rounded-md text-sm"
+          >
+            {item}
+          </span>
+        ))}
+      </div>
+      <span className="block mb-2 text-lg font-medium">{date}</span>
       <ReactMarkdown>{content}</ReactMarkdown>
     </section>
   );

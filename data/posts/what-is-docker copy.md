@@ -3,6 +3,7 @@ title: "What is Docker?"
 date: "Jan 20, 2022"
 excerpt: "Today's I will explain Docker. So, before I explain Docker let me explain why we need Docker?"
 cover_image: "/images/posts/docker.jpg"
+category: ["Docker"]
 ---
 
 ## Today's I will explain Docker. So, before I explain Docker let me explain why we need Docker?

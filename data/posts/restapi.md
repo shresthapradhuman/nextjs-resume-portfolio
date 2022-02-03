@@ -3,6 +3,7 @@ title: "WHAT IS REST API?"
 date: "Jan 21, 2022"
 excerpt: "For Example, Uber Eats, and other delivery company websites list your products to their website using your API."
 cover_image: "/images/posts/rest.jpg"
+category: ["Rest", "API"]
 ---
 ![alt restapi](https://namespaceit.com/uploads/post/image/1602502828.png)
 ---

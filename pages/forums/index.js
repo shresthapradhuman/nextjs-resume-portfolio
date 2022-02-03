@@ -29,12 +29,13 @@ function Blog({ posts }) {
               title={post.frontmatter.title}
               image={post.frontmatter.cover_image}
               excerpt={post.frontmatter.excerpt}
+              category = {post.frontmatter.category}
               link={post.slug}
               date={post.frontmatter.date}
             />
           ))}
         </div>
-        <div className="row">
+        {/* <div className="row">
           <div className="pagination">
             {range(1, Math.ceil(totalCount / 9)).map(
               (number, index) =>
@@ -48,7 +49,7 @@ function Blog({ posts }) {
                 )
             )}
           </div>
-        </div>
+        </div> */}
       </section>
     </>
   );

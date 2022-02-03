@@ -12,7 +12,7 @@ export default function Resume() {
         <h1 className="title pb-2 mb-5 text-2xl font-medium">My Resume</h1>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
           <ul className="resume py-5 pr-0 pl-8">
-            <li className="border-l-2 text-2xl flex items-center border-stone-400 relative pb-10 pl-8">
+            <li className="border-l-2 text-2xl flex items-center relative pb-10 pl-8">
               <span className="flex items-center justify-center w-16 h-16 rounded-full bg-yellow-400 mr-3 -ml-16">
                 <FaBriefcase size="28px" />
               </span>
@@ -21,7 +21,7 @@ export default function Resume() {
             {working.map((item, key) => (
               <li
                 key={key}
-                className="border-l-2 border-stone-400 relative before:absolute pb-5 pl-8 before:w-4 before:h-4 before:border-2 before:border-yellow-400 before:rounded-full before:bg-white last:border-0 "
+                className="border-l-2  relative before:absolute pb-5 pl-8 before:w-4 before:h-4 before:border-2 before:border-yellow-400 before:rounded-full before:bg-white last:border-0 "
               >
                 <h3 className="text-lg font-medium mb-1">{item.work}</h3>
                 <span className="text-base font-medium block mb-1">{`${item.from} ~ ${item.to}`}</span>
@@ -30,7 +30,7 @@ export default function Resume() {
             ))}
           </ul>
           <ul className="resume py-5 pr-0 pl-8">
-            <li className="border-l-2 text-2xl flex items-center border-stone-400 relative pb-10 pl-8">
+            <li className="border-l-2 text-2xl flex items-center  relative pb-10 pl-8">
               <span className="flex items-center justify-center w-16 h-16 rounded-full bg-yellow-400 mr-3 -ml-16">
                 <FaGraduationCap size="28px" />
               </span>
@@ -39,7 +39,7 @@ export default function Resume() {
             {education.map((item, key) => (
               <li
                 key={key}
-                className="border-l-2 border-stone-400 relative before:absolute pb-5 pl-8 before:w-4 before:h-4 before:border-2 before:border-yellow-400 before:rounded-full before:bg-white last:border-0 "
+                className="border-l-2 relative before:absolute pb-5 pl-8 before:w-4 before:h-4 before:border-2 before:border-yellow-400 before:rounded-full before:bg-white last:border-0 "
               >
                 <h3 className="text-lg font-medium mb-1">{item.school}</h3>
                 <span className="text-base font-medium block mb-1">{`${item.from} ~ ${item.to}`}</span>

@@ -3,7 +3,9 @@ title: "What is Promises?"
 date: "23 Jan, 2022"
 excerpt: "A promise is an object that returns a value which you hope to receive in the future"
 cover_image: "/images/posts/promises.webp"
+category: ["Promises"]
 ---
+
 ![alt Promise](/images/posts/promises.webp)
 Suppose you have a plan to go to watch movies this afternoon. But you can't go to buy the ticket for that movie cause you have lots of work to be done.
 
@@ -48,4 +50,4 @@ Benefits of Promises:-
 3. solves the problem of callback hell
 4. Imporved readability
 
-Thanks for reading this blog. And Promise me you will share this post your friends. 
+Thanks for reading this blog. And Promise me you will share this post your friends.

@@ -60,32 +60,46 @@ export default function ContactForm() {
         name="contact"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        className="mt-10 mb-5"
       >
         <div>
           <Field type="hidden" name="form-name" />
           <Field type="hidden" name="bot-field" />
         </div>
-        <div>
-          <label htmlFor="name">Name *</label>
-          <Field type="name" id="name" name="name" placeholder="Name" />
-          <div className="error">
+        <div className="flex flex-col mb-5">
+          <label htmlFor="name" className="text-xl font-medium mb-2">
+            Name *
+          </label>
+          <Field
+            type="name"
+            id="name"
+            name="name"
+            placeholder="Name"
+            className=" bg-slate-100 py-2 px-2 mb-2 focus:outline-none"
+          />
+          <div className=" text-red-500">
             <ErrorMessage name="name" />
           </div>
         </div>
-        <div>
-          <label htmlFor="email">Email *</label>
+        <div className="flex flex-col mb-5">
+          <label htmlFor="email" className="text-xl font-medium mb-2">
+            Email *
+          </label>
           <Field
             type="email"
             id="email"
             name="email"
             placeholder="Email Address"
+            className="bg-slate-100 py-2 px-2 mb-2 focus:outline-none"
           />
-          <div className="error">
+          <div className="text-red-500">
             <ErrorMessage name="email" />
           </div>
         </div>
-        <div>
-          <label htmlFor="message">Message *</label>
+        <div className="flex flex-col mb-5">
+          <label htmlFor="message" className="text-xl font-medium mb-2">
+            Message *
+          </label>
           <Field
             as="textarea"
             id="message"
@@ -93,13 +107,14 @@ export default function ContactForm() {
             placeholder="Enter your message"
             cols="30"
             rows="10"
+            className="bg-slate-100 py-2 px-2 mb-2 focus:outline-none"
           />
-          <div className="error">
+          <div className="text-red-500">
             <ErrorMessage name="message" />
           </div>
         </div>
 
-        <button type="submit">Send Message</button>
+        <button type="submit" className=" bg-orange-500 px-5 py-3 text-xl font-medium rounded-full text-white">Send Message</button>
       </Form>
     </Formik>
   );
