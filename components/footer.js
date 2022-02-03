@@ -5,7 +5,7 @@ function Footer() {
       <p className="text-white text-lg font-light">
         @2021 All right are reserved. Designed By{" "}
         <Link href="https://shresthapradhuman.com.np">
-          <a target={"_blank"} className=" text-orange-400">Shrestha Pradhuman</a>
+          <a target={"_blank"} rel="noopener" className=" text-orange-400">Shrestha Pradhuman</a>
         </Link>
       </p>
     </footer>
