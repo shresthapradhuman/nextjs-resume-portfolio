@@ -26,7 +26,7 @@ function BlogCard({ title, image, date, category, excerpt, link }) {
           <span className="text-xs font-medium rounded block mb-2">{date}</span>
           <p className="text-base font-light h-20">{excerpt.slice(0, 100)}..</p>
           <Link href={`/forums/${link}`}>
-            <a className=" float-right my-2 text-blue-400 border-b-2 border-b-white hover:border-b-2 hover:border-b-blue-400 transition-all ease-in-out duration-100">
+            <a className=" float-right my-2 text-orange-700 border-b-2 border-b-white hover:border-b-2 hover:border-b-blue-400 transition-all ease-in-out duration-100">
               Read More ..
             </a>
           </Link>

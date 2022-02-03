@@ -50,6 +50,7 @@ function MyApp({ Component, pageProps }) {
             <Link href="/">
               <a
                 className={`capitalize ${path == "/" ? "text-orange-500" : ""}`}
+                rel="noopener"
               >
                 home
               </a>
@@ -59,9 +60,13 @@ function MyApp({ Component, pageProps }) {
                 href={`/${key > 0 ? breadcrumbs[key - 1] + "/" : ""}${item}`}
                 key={key}
               >
-                <a className=" capitalize last:text-orange-500">{`${
-                  item !== "" ? " /" : ""
-                } ${item}`}</a>
+                <a
+                  className=" capitalize last:text-orange-500"
+                  rel="noopener"
+                  aria-label={`${item !== "" ? item : "blank"}`}
+                >
+                  {`${item !== "" ? " /" : ""} ${item}`}
+                </a>
               </Link>
             ))}
           </div>
