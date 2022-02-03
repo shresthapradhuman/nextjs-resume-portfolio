@@ -5,14 +5,14 @@ function BlogCard({ title, image, date, category, excerpt, link }) {
   return (
     <>
       <div className="shadow shadow-slate-400">
-        <div className=" overflow-hidden mb-2">
+        <div className=" overflow-hidden mb-2 shadow shadow-slate-400">
           <Image
             src={image}
             width={200}
             height={200}
             layout={`responsive`}
             alt="post-img"
-            className=" w-full object-cover object-center transition-all ease-in-out duration-700 scale-105 hover:scale-110 "
+            className=" w-full object-center transition-all ease-in-out duration-700 scale-105 hover:scale-110 "
             priority
           />
         </div>
