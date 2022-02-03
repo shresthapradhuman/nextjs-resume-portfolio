@@ -17,7 +17,7 @@ function Header() {
       <Link href={"/"}>
         <a
           className="h-full rounded-tl-md hover:bg-yellow-500 rounded-bl-md w-16 flex items-center justify-center bg-yellow-400"
-          onClick={handleNavClick}
+          onClick={handleNavClick} aria-label="home"
         >
           <FaHome size="30" />
         </a>
