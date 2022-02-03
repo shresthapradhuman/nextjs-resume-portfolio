@@ -10,8 +10,8 @@ import Head from "next/head";
 function Blog({ posts }) {
   let router = useRouter();
   let page = parseInt(router.query.page);
-  let perPage = page ? page * 9 : 9;
-  let datas = posts.slice(perPage - 9, perPage);
+  let perPage = page ? page * 6 : 6;
+  let datas = posts.slice(perPage - 6, perPage);
   let totalCount = posts.length;
   const range = (start, end) =>
     [...Array(end - start + 1)].map((_, i) => start + i);
@@ -32,21 +32,21 @@ function Blog({ posts }) {
             />
           ))}
         </div>
-        {/* <div className="row">
+        <div className="flex items-center justify-center mt-5">
           <div className="pagination">
-            {range(1, Math.ceil(totalCount / 9)).map(
+            {range(1, Math.ceil(totalCount / 6)).map(
               (number, index) =>
-                totalCount > 9 && (
+                totalCount > 6 && (
                   <Link
                     key={index}
-                    href={number > 1 ? `/blog/?page=${number}` : `/blog`}
+                    href={number > 1 ? `/forums/?page=${number}` : `/forums`}
                   >
-                    <a>{number}</a>
+                    <a className="py-1 px-2 mr-2 border-2">{number}</a>
                   </Link>
                 )
             )}
           </div>
-        </div> */}
+        </div>
       </section>
     </>
   );
