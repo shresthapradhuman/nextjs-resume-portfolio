@@ -6,11 +6,13 @@ import Footer from "../components/footer";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import * as gtag from "../lib/gtag";
+import Link from "next/link";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   let path = router.asPath;
   let pathCapitalize = [];
+  let breadcrumbs = path.replace("/", "").split("/");
   if (path.replace("/", "") !== "") {
     let pathArray = path.replace("/", "").split("/");
     pathArray.map((item) => {
@@ -41,6 +43,25 @@ function MyApp({ Component, pageProps }) {
         </aside>
         <main className="lg:basis-8/12 lg:ml-5 xl:basis-9/12">
           <Header />
+          <div className="my-2 opacity-90 bg-white px-2">
+            <Link href="/">
+              <a
+                className={`capitalize ${path == "/" ? "text-orange-500" : ""}`}
+              >
+                home
+              </a>
+            </Link>
+            {breadcrumbs.map((item, key) => (
+              <Link
+                href={`/${key > 0 ? breadcrumbs[key - 1] + "/" : ""}${item}`}
+                key={key}
+              >
+                <a className=" capitalize last:text-orange-500">{`${
+                  item !== "" ? " /" : ""
+                } ${item}`}</a>
+              </Link>
+            ))}
+          </div>
           <Component {...pageProps} />
           <Footer />
         </main>
