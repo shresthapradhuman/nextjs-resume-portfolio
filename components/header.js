@@ -43,7 +43,9 @@ function Header() {
       <div className="flex flex-auto justify-end md:flex-none">
         {social.map((item, key) => (
           <Link key={key} href={item.url}>
-            <a className="px-1">{item.icon}</a>
+            <a className="px-1" target="_blank" aria-label={item.label}>
+              {item.icon}
+            </a>
           </Link>
         ))}
       </div>
@@ -55,7 +57,10 @@ function Header() {
           Hire Me
         </a>
       </Link>
-      <span className="flex items-center justify-center mx-2 cursor-pointer md:hidden" onClick={handleMobileClick}>
+      <span
+        className="flex items-center justify-center mx-2 cursor-pointer md:hidden"
+        onClick={handleMobileClick}
+      >
         {mobile ? <FaTimes size="20" /> : <FaBars size="20" />}
       </span>
     </header>

@@ -60,18 +60,22 @@ export const nav = [
 /** social */
 export const social = [
   {
+    label: "facebook",
     icon: <FaFacebookF className="facebook" />,
     url: "https://www.facebook.com/shresthapradhuman",
   },
   {
+    label: "instagram",
     icon: <FaInstagram className="instagram" />,
     url: "https://www.instagram.com/shresthapradhuman/",
   },
   {
+    label: "youtube",
     icon: <FaYoutube className="youtube" />,
     url: "https://www.youtube.com/channel/UC833VjwIP98-Qv2-FAGJLIw",
   },
   {
+    label: "github",
     icon: <FaGithub className="github" />,
     url: "https://github.com/shresthapradhuman",
   },
@@ -219,5 +223,3 @@ export const contact = {
   email: "shresthapradhuman2018@gmail.com",
   freelance: "available",
 };
-
-
