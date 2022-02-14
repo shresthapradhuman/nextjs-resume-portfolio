@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import useSWR from "swr";
+import * as gtag from "../lib/gtag";
 
 const fetcher = async () => {
   const response = await fetch(
@@ -17,6 +19,17 @@ const fetcher = async () => {
 };
 
 function Projects() {
+  const [score, setScore] = useState(0);
+  const handleGA = () => {
+    setScore(score++);
+
+    gtag.event({
+      action: "github repository visited",
+      category: "score",
+      label: "score",
+      value: score,
+    });
+  };
   const { data, error } = useSWR("work", fetcher);
   if (error) return `An error has occured`;
   if (!data) return `loading..`;
@@ -27,10 +40,18 @@ function Projects() {
         <div className="grid grid-cols-1 xl:grid-cols-4 gap-4 md:grid-cols-2">
           {data.map((item, key) => (
             <Link href={item.html_url} key={key}>
-              <a className="shadow shadow-slate-400">
+              <a
+                className="shadow shadow-slate-400"
+                target="_blank"
+                onClick={handleGA}
+              >
                 <div className="p-2">
-                  <h2 className="text-lg capitalize text-center py-1">{item.name.slice(0, 20)}</h2>
-                  <p className="font-light mb-2 h-32">{item.description.slice(0, 100)}</p>
+                  <h2 className="text-lg capitalize text-center py-1">
+                    {item.name.slice(0, 20)}
+                  </h2>
+                  <p className="font-light mb-2 h-32">
+                    {item.description.slice(0, 100)}
+                  </p>
                   <span className="block text-right">{item.language}</span>
                 </div>
               </a>
