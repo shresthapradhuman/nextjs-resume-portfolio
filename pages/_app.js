@@ -10,16 +10,13 @@ import Link from "next/link";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  let path = router.asPath;
+  let path = router.pathname;
   let pathCapitalize = [];
-  let breadcrumbs = path.replace("/", "").split("/");
-  if (path.replace("/", "") !== "") {
-    let pathArray = path.replace("/", "").split("/");
-    pathArray.map((item) => {
-      pathCapitalize.push(item[0].toUpperCase() + item.slice(1));
-    });
-  } else {
-    pathCapitalize.push("About Me");
+  if (path.length > 1) {
+    pathCapitalize.push(path.split("/")[1]);
+  }
+  if (router.query.slug) {
+    pathCapitalize.push(router.query.slug);
   }
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -55,9 +52,13 @@ function MyApp({ Component, pageProps }) {
                 home
               </a>
             </Link>
-            {breadcrumbs.map((item, key) => (
+            {pathCapitalize.map((item, key) => (
               <Link
-                href={`/${key > 0 ? breadcrumbs[key - 1] + "/" : ""}${item}`}
+                href={`/${
+                  pathCapitalize[key - 1] == null
+                    ? ""
+                    : pathCapitalize[key - 1] + "/"
+                }${item}`}
                 key={key}
               >
                 <a

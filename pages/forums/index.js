@@ -26,7 +26,7 @@ function Blog({ posts }) {
               title={post.frontmatter.title}
               image={post.frontmatter.cover_image}
               excerpt={post.frontmatter.excerpt}
-              category = {post.frontmatter.category}
+              category={post.frontmatter.category}
               link={post.slug}
               date={post.frontmatter.date}
             />
