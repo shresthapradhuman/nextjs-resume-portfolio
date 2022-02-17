@@ -1,6 +1,7 @@
 import Header from "../components/header";
 import Profile from "../components/profile";
 import "../styles/global.scss";
+import "../styles/markdown.scss";
 import Head from "next/head";
 import Footer from "../components/footer";
 import { useRouter } from "next/router";

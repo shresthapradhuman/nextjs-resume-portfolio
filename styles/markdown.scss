@@ -1,0 +1,78 @@
+.forum {
+  h1,
+  h2 {
+    padding: 1rem 0;
+    display: block;
+  }
+  h1 {
+    font-size: 2em;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1.17em;
+  }
+  h4 {
+    margin-top: 1.33em;
+  }
+  p {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  hr {
+    margin: 1em 0;
+    display: block;
+    border-style: inset;
+    border-width: 1px;
+  }
+  ul,
+  ol {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+  }
+  ul {
+    list-style-type: disc;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+
+  li {
+    display: list-item;
+  }
+  pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+  }
+  code {
+    display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: initial;
+    border: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
