@@ -40,7 +40,7 @@ function Header() {
           </Link>
         ))}
       </nav>
-      <div className="flex flex-auto justify-end md:flex-none">
+      <div className="flex flex-auto justify-end md:flex-none mr-2">
         {social.map((item, key) => (
           <Link key={key} href={item.url}>
             <a className="px-1" target="_blank" rel="noreferrer" aria-label={item.label}>
@@ -49,14 +49,6 @@ function Header() {
           </Link>
         ))}
       </div>
-      <Link href={"/contact"}>
-        <a className="flex items-center bg-yellow-400 py-1 px-2 mx-2 rounded-2xl hover:bg-yellow-500">
-          <span className="mr-2">
-            <FaPaperPlane />
-          </span>
-          Hire Me
-        </a>
-      </Link>
       <span
         className="flex items-center justify-center mx-2 cursor-pointer md:hidden"
         onClick={handleMobileClick}
