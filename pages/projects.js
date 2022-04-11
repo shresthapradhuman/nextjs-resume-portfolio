@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -36,8 +35,8 @@ function Projects() {
   return (
     <>
       <section className="mt-3 shadow shadow-slate-400 rounded-2xl my-2 bg-white py-10 px-5">
-        <h2 className="title text-2xl pb-2 mb-5">My Project</h2>
-        <div className="grid grid-cols-1 xl:grid-cols-4 gap-4 md:grid-cols-2">
+        <h2 className="title text-2xl pb-2 mb-5">My Git Project</h2>
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 md:grid-cols-2">
           {data.map((item, key) => (
             <Link href={item.html_url} key={key}>
               <a
@@ -46,6 +45,15 @@ function Projects() {
                 onClick={handleGA}
               >
                 <div className="p-2">
+                  <Image
+                    alt={item.name}
+                    src={`/images/project/${item.name}.png`}
+                    width="100"
+                    height="100"
+                    layout="responsive"
+                    className="w-full object-cover"
+                  />
+
                   <h2 className="text-lg capitalize text-center py-1">
                     {item.name.slice(0, 20)}
                   </h2>
