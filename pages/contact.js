@@ -14,12 +14,6 @@ export default function Contact() {
             <span className="text-xl font-medium">Email: </span>
             <span className="text-xl font-light">{data.email}</span>
           </li>
-          <li className="py-2 flex justify-between">
-            <span className="text-xl font-medium">Freelancer: </span>
-            <span className="text-xl font-light capitalize">
-              {data.freelance}
-            </span>
-          </li>
         </ul>
       </div>
       <div className="py-10 px-5">

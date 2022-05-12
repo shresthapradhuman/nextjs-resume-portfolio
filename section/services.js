@@ -6,7 +6,7 @@ export const Services = () => {
       <h2 className="title  pb-2 mb-5 text-2xl font-medium">
         {services.title}
       </h2>
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
+      <div className="grid md:grid-cols-2 xl:grid-cols-3 grid-cols-1 gap-4">
         {services.item.map((item, key) => (
           <ServicesCard
             key={key}

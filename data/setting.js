@@ -2,9 +2,7 @@ import {
   FaFacebookF,
   FaGithub,
   FaHtml5,
-  FaInstagram,
-  FaMobile,
-  FaYoutube,
+  FaInstagram
 } from "react-icons/fa";
 import { SiMaterialdesignicons } from "react-icons/si";
 import { GrVmMaintenance } from "react-icons/gr";
@@ -20,7 +18,7 @@ let age = (dob) => {
 
 export const profile = {
   name: "Shrestha Pradhuman",
-  role: ["Magento Developer", "Full Stack Developer"],
+  role: ["Full Stack Developer"],
   image: "profile.webp",
   details: [
     {
@@ -34,10 +32,6 @@ export const profile = {
     {
       label: "Current",
       value: "Tokyo, Japan",
-    },
-    {
-      label: "Freelancer",
-      value: "Available",
     },
   ],
   resume: "/downloads/resume.pdf",
@@ -70,11 +64,6 @@ export const social = [
     label: "instagram",
     icon: <FaInstagram className="instagram" />,
     url: "https://www.instagram.com/shresthapradhuman/",
-  },
-  {
-    label: "youtube",
-    icon: <FaYoutube className="youtube" />,
-    url: "https://www.youtube.com/channel/UC833VjwIP98-Qv2-FAGJLIw",
   },
   {
     label: "github",
@@ -114,12 +103,6 @@ export const services = {
       description:
         "Your time is money, and money is your time. I can maintain your website and web server on your behalf of you. so that you can have more time to earn more from your business.",
     },
-    {
-      icon: <FaMobile className="mobile" />,
-      title: "Mobile Application",
-      description:
-        "Mobile Applications for business are the most competent tool to optimize, enhance, increase your business operations. So, I can provide cross-browser and cross-platform supported mobile applications for your business.",
-    },
   ],
 };
 /** skills */
@@ -129,7 +112,7 @@ export const skills = {
     title: "Coding",
     items: [
       {
-        title: "HTML/CSS/JS",
+        title: "HTML/CSS/JS/SCSS",
         percent: "85",
       },
       {
@@ -173,28 +156,28 @@ export const skills = {
 export const working = [
   {
     work: "Magento Developer-Veriteworks Inc, Japan",
-    from: "2021",
+    from: "2020-10",
     to: "Present",
     description:
       "Developing, and hosting Magento based e-commerce websites. Building modules, themes, and troubleshooting the bugs.",
   },
   {
     work: "Store Assistant, Family Mart, Japan",
-    from: "2020-09",
-    to: "2020-12",
+    from: "2020-03",
+    to: "2020-09",
     description:
       "Stock Order Placement, Banking Transaction, Staff Shift Management, Customer Dealing, and Other Daily Jobs",
   },
   {
     work: "Employee, FunToFun Inc, Japan",
     from: "2017-05",
-    to: "2020-08",
+    to: "2020-02",
     description:
       "Handling Phone Calls From Customer. Helping people to find the part time jobs etc.",
   },
   {
     work: "System Administrator, Raptibheri Bikas Bank, Nepal",
-    from: "2010-09",
+    from: "2011-09",
     to: "2013-01",
     description:
       "Server maintainance and Data Backup, Office Networking, Office Website maintaince, Internal Office Support, Software Install & Update, User Account Control.",
@@ -205,8 +188,8 @@ export const working = [
 export const education = [
   {
     school: "PHP School, Ikebukuro, Japan",
-    from: "2020-09",
-    to: "2020-10",
+    from: "2020-08",
+    to: "2020-09",
     description:
       "PHP Basic, MVC Model, Object Oriented Programming, PHP Framework Laravel.",
   },
@@ -234,6 +217,5 @@ export const education = [
 /** contact */
 export const contact = {
   address: "Tokyo, Japan",
-  email: "shresthapradhuman2018@gmail.com",
-  freelance: "available",
+  email: "shresthapradhuman2020@gmail.com"
 };
