@@ -1,6 +1,6 @@
 ---
 title: "Sidebar With Pure CSS"
-date: "Feb 8, 2022"
+date: "8 Feb, 2022"
 excerpt: "Both the sidebar and main content are overlaid on top of each other, occupying the same area in the grid"
 cover_image: "/images/posts/purecsssidebar.webp"
 category: ["Html", "CSS"]
