@@ -3,7 +3,7 @@ title: "What is Promises?"
 date: "23 Jan, 2022"
 excerpt: "A promise is an object that returns a value which you hope to receive in the future"
 cover_image: "/images/posts/promises.webp"
-category: ["Promises"]
+category: ["JavaScript"]
 ---
 
 ![alt Promise](/images/posts/promises.webp)

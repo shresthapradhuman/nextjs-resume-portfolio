@@ -3,7 +3,7 @@ title: "Basic Of JavaScript Objects"
 date: "20 Apr, 2022"
 excerpt: "Object is the collection of data stored under the same variable/name in the form of name-value pairs."
 cover_image: "/images/posts/basicofjavascriptobject.webp"
-category: ["Javascript"]
+category: ["JavaScript"]
 ---
 
 # Object Overview

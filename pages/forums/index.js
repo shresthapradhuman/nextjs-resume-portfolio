@@ -1,13 +1,13 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import BlogCard from "../../components/blogCard";
+import BlogCard from "../../components/BlogCard";
 import SortByDate from "../../utils/sortbydate";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
-function Blog({ posts }) {
+function Blog({ posts, category }) {
   let router = useRouter();
   let page = parseInt(router.query.page);
   let perPage = page ? page * 6 : 6;
@@ -15,10 +15,14 @@ function Blog({ posts }) {
   let totalCount = posts.length;
   const range = (start, end) =>
     [...Array(end - start + 1)].map((_, i) => start + i);
+
+  const newCat = Array.from(new Set(category)).sort();
   return (
     <>
       <section className="my-5 mt-3 shadow shadow-slate-400 rounded-2xl py-10 px-5 bg-white">
-        <h1 className="title pb-2 mb-5 text-2xl font-medium">Blog</h1>
+        <div>
+          <h1 className="title pb-2 mb-5 text-2xl font-medium">Blog</h1>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           {datas.map((post, key) => (
             <BlogCard
@@ -72,9 +76,16 @@ export async function getStaticProps() {
       frontmatter,
     };
   });
+  let catArry = [];
+  posts.map((item) => {
+    item.frontmatter.category.forEach((itm) => {
+      catArry.push(itm);
+    });
+  });
   return {
     props: {
       posts: posts.sort(SortByDate),
+      category: catArry,
     },
   };
 }

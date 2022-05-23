@@ -3,7 +3,7 @@ title: "6 Basic Coding Concepts for Begineers"
 date: "11 Apr, 2022"
 excerpt: "Currently there are hundreds of programming language in use today(like C, C++, C#, Java, JavaScript, Ruby, Python, etc). But all them share the same foundational building blocks."
 cover_image: "/images/posts/6basiccodingconcept.webp"
-category: ["programming"]
+category: ["JavaScript", "PHP"]
 ---
 
 Currently, there are hundreds of programming languages in use(like C, C++, C#, Java, JavaScript, Ruby, Python, etc). But all they share the same foundational building blocks. Here, I am going to write about six basic concepts that help me to learn a different programming language(In my case PHP, Javascript).

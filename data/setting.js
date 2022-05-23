@@ -22,17 +22,17 @@ export const profile = {
   image: "profile.webp",
   details: [
     {
-      label: "Age",
-      value: age("04/18/1989"),
+      label: "Date of Birth",
+      value: "18 April 1989",
     },
     {
-      label: "Residence",
-      value: "Nepal",
-    },
-    {
-      label: "Current",
+      label: "Address",
       value: "Tokyo, Japan",
     },
+    {
+      label: "Nationality",
+      value: "Nepali",
+    }
   ],
   resume: "/downloads/resume.pdf",
 };
@@ -40,13 +40,10 @@ export const profile = {
 /** navbar */
 export const nav = [
   {
-    title: "resume",
-  },
-  {
     title: "projects",
   },
   {
-    title: "forums",
+    title: "blog",
   },
   {
     title: "contact",
@@ -107,7 +104,7 @@ export const services = {
 };
 /** skills */
 export const skills = {
-  title: "My Skills",
+  title: "Skills",
   coding: {
     title: "Coding",
     items: [

@@ -67,7 +67,7 @@ export default function ContactForm() {
           <Field type="hidden" name="bot-field" />
         </div>
         <div className="flex flex-col mb-5">
-          <label htmlFor="name" className="text-xl font-medium mb-2">
+          <label htmlFor="name" className="text-lg mb-2">
             Name *
           </label>
           <Field
@@ -82,7 +82,7 @@ export default function ContactForm() {
           </div>
         </div>
         <div className="flex flex-col mb-5">
-          <label htmlFor="email" className="text-xl font-medium mb-2">
+          <label htmlFor="email" className="text-lg mb-2">
             Email *
           </label>
           <Field
@@ -97,7 +97,7 @@ export default function ContactForm() {
           </div>
         </div>
         <div className="flex flex-col mb-5">
-          <label htmlFor="message" className="text-xl font-medium mb-2">
+          <label htmlFor="message" className="text-lg mb-2">
             Message *
           </label>
           <Field
@@ -105,16 +105,20 @@ export default function ContactForm() {
             id="message"
             name="message"
             placeholder="Enter your message"
-            cols="30"
-            rows="10"
-            className="bg-slate-100 py-2 px-2 mb-2 focus:outline-none"
+            rows="8"
+            className="bg-slate-100 py-2 px-2 mb-2 focus:outline-none resize-none"
           />
           <div className="text-red-500">
             <ErrorMessage name="message" />
           </div>
         </div>
 
-        <button type="submit" className=" bg-orange-500 px-5 py-3 text-xl font-medium rounded-full text-white">Send Message</button>
+        <button
+          type="submit"
+          className="px-2 py-2 text-lg border-2 border-slate-800 hover:bg-black hover:text-white transition w-max"
+        >
+          Send Message
+        </button>
       </Form>
     </Formik>
   );

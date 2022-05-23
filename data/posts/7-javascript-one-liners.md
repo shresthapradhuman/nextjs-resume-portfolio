@@ -3,7 +3,7 @@ title: "7 JavaScript One-Liners"
 date: "15 Feb, 2022"
 excerpt: "JavaScript is the backbone of Web Development. So, today I will share 7 One-Liners of JavaScript."
 cover_image: "/images/posts/7javascriptoneliner.webp"
-category: ["Javascript"]
+category: ["JavaScript"]
 ---
 
 ## As Everyone know that JavaScript is the backbone of Web Development. <br> So, today I will share 7 One-Liners of JavaScript. 

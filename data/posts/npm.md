@@ -3,7 +3,7 @@ title: "WHAT IS NPM?"
 date: "22 Jan, 2022"
 excerpt: "NPM is the default package manager for Javascript's runtime Nodejs"
 cover_image: "/images/posts/npm.webp"
-category: ["NPM"]
+category: ["JavaScript"]
 ---
 Let's say you want to build an application for yourself. And you can do this in two ways. 
 1. Either you can build it from scratch, writing every single line of code.

@@ -8,6 +8,9 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import * as gtag from "../lib/gtag";
 import Link from "next/link";
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -47,7 +50,7 @@ function MyApp({ Component, pageProps }) {
           <div className="my-2 opacity-90 bg-white px-2">
             <Link href="/">
               <a
-                className={`capitalize ${path == "/" ? "text-orange-500" : ""}`}
+                className={`capitalize ${path == "/resume" ? "text-orange-500" : ""}`}
                 rel="noopener"
               >
                 home

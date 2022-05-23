@@ -3,7 +3,7 @@ title: "10 JavaScript Naming Conventions"
 date: "17 Feb, 2022"
 excerpt: "Every JavaScript Developer Must Know Naming Convention. So, today I will discuss 10 JavaScript naming convention best practices one should follow in his/her project."
 cover_image: "/images/posts/jsnamingconventions.webp"
-category: ["Javascript"]
+category: ["JavaScript"]
 ---
 
 # Every JavaScript Developer Must Know Naming Convention.

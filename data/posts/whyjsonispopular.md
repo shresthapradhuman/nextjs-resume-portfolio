@@ -3,7 +3,7 @@ title: "Reason Json is popular."
 date: "7 Mar, 2022"
 excerpt: "More than 40% sites uses JSON and almost 95% API returns and receive data in some form of JSON."
 cover_image: "/images/posts/jsonispopular.webp"
-category: ["JSON", "Javascript"]
+category: ["JSON", "JavaScript"]
 ---
 # What is JSON?
 

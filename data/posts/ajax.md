@@ -3,7 +3,7 @@ title: "Ajax"
 date: "03 Mar, 2022"
 excerpt: "Ajax is technique for creating better, faster and more interactive web applications"
 cover_image: "/images/posts/ajax.webp"
-category: ["Ajax", "Javascript"]
+category: ["Ajax", "JavaScript"]
 ---
 
 Ajax is a technique for creating better, faster, and more interactive web applications.
