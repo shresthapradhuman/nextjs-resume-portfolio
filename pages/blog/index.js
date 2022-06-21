@@ -43,7 +43,7 @@ const Forum = ({ posts, categories, archives }) => {
         <div className="grid  md:grid-cols-[minmax(0,_1fr)_minmax(0,_0.4fr)] gap-1">
           <article className="border-r shadow shadow-slate-400 pb-8">
             <h1 className="title mb-5 p-2 text-2xl font-light">Blog</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-2">
               {pgFltr.map((post, key) => (
                 <BlogCard
                   key={key}
