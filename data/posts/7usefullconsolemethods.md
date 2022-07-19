@@ -3,7 +3,7 @@ title: "7 Useful Console Methods"
 date: "19 Jul, 2022"
 excerpt: "Here, I will explain 7 console methods that will be useful while working with console."
 cover_image: "/images/posts/7usefulconsolemethods.webp"
-category: ["Javascript"]
+category: ["JavaScript"]
 ---
 
 In JavaScript, we mostly use the console for logging our results to check whether our code is running well or not. But there are lots of things we can do in our console.
