@@ -19,7 +19,7 @@ let age = (dob) => {
 export const profile = {
   name: "Shrestha Pradhuman",
   role: ["Full Stack Developer"],
-  image: "profile.webp",
+  image: "profile.jpg",
   details: [
     {
       label: "Date of Birth",
