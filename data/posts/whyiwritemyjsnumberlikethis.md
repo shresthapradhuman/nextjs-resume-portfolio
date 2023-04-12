@@ -1,5 +1,5 @@
 ---
-title: "write an article for Why I Write My JS Numbers Like This - 1_000_000s"
+title: "Why I Write My JS Numbers Like This - 1_000_000"
 date: "12 Apr, 2023"
 excerpt: " For example, 1_000_000 is far more readable than 1000000. Using underscores to separate groups of three digits helps us quickly determine that the number is in the millions, and how many digits are in the number without the need for a calculator."
 cover_image: "/images/posts/whyiwritemynumberlikethis.png"
