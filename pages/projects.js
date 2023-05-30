@@ -47,7 +47,7 @@ function Projects() {
                 <div className="p-2">
                   <Image
                     alt={item.name}
-                    src={`/images/project/${item.name}.png`}
+                    src={`/images/project/${item?.name}.png`}
                     width="100"
                     height="100"
                     layout="responsive"
@@ -55,12 +55,12 @@ function Projects() {
                   />
 
                   <h2 className="text-lg capitalize text-center py-1">
-                    {item.name.slice(0, 20)}
+                    {item?.name.slice(0, 20)}
                   </h2>
                   <p className="font-light mb-2 h-32">
                     {item.description.slice(0, 100)}
                   </p>
-                  <span className="block text-right">{item.language}</span>
+                  <span className="block text-right">{item?.language}</span>
                 </div>
               </a>
             </Link>
