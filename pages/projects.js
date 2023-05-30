@@ -19,16 +19,16 @@ const fetcher = async () => {
 
 function Projects() {
   const [score, setScore] = useState(0);
-  const handleGA = () => {
-    setScore(score++);
+//   const handleGA = () => {
+//     setScore(score++);
 
-    gtag.event({
-      action: "github repository visited",
-      category: "score",
-      label: "score",
-      value: score,
-    });
-  };
+//     gtag.event({
+//       action: "github repository visited",
+//       category: "score",
+//       label: "score",
+//       value: score,
+//     });
+//   };
   const { data, error } = useSWR("work", fetcher);
   if (error) return `An error has occured`;
   if (!data) return `loading..`;
@@ -42,7 +42,7 @@ function Projects() {
               <a
                 className="shadow shadow-slate-400"
                 target="_blank"
-                onClick={handleGA}
+//                 onClick={handleGA}
               >
                 <div className="p-2">
                   <Image
